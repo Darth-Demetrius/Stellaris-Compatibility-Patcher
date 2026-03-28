@@ -1,0 +1,27 @@
+# BPVR Workflow CLI Commands
+
+# 0) One-time setup in this repo
+# git config rerere.enabled true
+# git config rerere.autoupdate true
+
+# 1) Generate fresh prep output on prep-generated
+git checkout prep-generated
+python .scripts/update_workflow.py prep
+git add _Merged
+git commit -m "Prep upstream update"
+
+# 2) Merge prep output into resolved
+git checkout resolved
+git merge prep-generated
+
+# 3) Resolve remaining conflicts (if any)
+# Always review conflicts first:
+#   _Merged/.conflicts/conflicts.json
+bash _Merged/.conflicts/manual_merge.sh
+
+# 4) Commit merge resolutions
+git add _Merged
+git commit -m "Resolve merged update"
+
+# 5) Build output artifacts
+python .scripts/update_workflow.py build

@@ -1,0 +1,47 @@
+# Changed folders (merged across mods)
+
+- common
+  - buildings
+  - colony_automation
+  - colony_types
+  - decisions
+  - deposits
+  - districts
+  - inline_scripts
+    - districts
+    - jobs
+  - on_actions
+  - planet_classes
+  - pop_jobs
+  - scripted_effects
+  - scripted_triggers
+  - scripted_variables
+  - static_modifiers
+  - technology
+  - zone_slots
+  - zones
+- events
+- gfx
+  - event_pictures
+  - interface
+    - icons
+      - buildings
+      - decisions
+      - deposits
+      - districts
+        - grid_box
+      - jobs
+      - modifiers
+      - planet_backgrounds
+      - planet_modifiers
+      - technologies
+    - planetview
+      - district_backgrounds
+  - models
+    - planets
+      - apocalypse_planet_effects
+  - particles
+  - portraits
+    - environments
+    - misc
+- interface
