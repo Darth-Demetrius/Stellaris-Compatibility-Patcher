@@ -1,0 +1,172 @@
+# auto-generated
+# output: common/districts/����_all_merged_common_items_replace.txt
+# supported_version: 
+# sort_key: [1, 11, "district_arcology_housing"]
+# sources: [{"ref": "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt", "supported_version": "4.*"}, {"ref": "External Mods/BPVR - More Building Slots/common/districts/01_arcology_districts_replace.txt", "supported_version": "4.*"}, {"ref": "External Mods/Planetary Diversity - More Arcologies/common/districts/01_arcology_districts.txt", "supported_version": "4.3.*"}]
+
+district_arcology_housing = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_wilderness_empire = no }
+		uses_district_set = city_world
+	}
+
+	potential = {
+		uses_district_set = city_world
+		NAND = {
+			is_capital = yes
+			owner = {
+				has_menace_perk = menp_behemoth_mind_meld
+			}
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_mindlink
+        # AG Mod Integration
+		################################# New Contents #################################
+        district_ag_shell_world_housing
+        district_ag_ancient_city_housing
+        district_ag_ancient_city_wilderness
+        district_ag_hive
+        district_ag_ancient_hive_wilderness
+        district_ag_nexus
+		##############################################################################
+	}
+
+	# EPM Mod Integration
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_civic_avian_construction = yes
+					is_hive_empire = no
+				}
+			}
+			minerals = 100
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_civic_avian_construction = yes
+					is_hive_empire = yes
+				}
+			}
+			food = 100
+		}
+		upkeep = {
+			energy = 5
+		}
+		produces = {
+			trigger = {
+				has_global_flag = ecology_pops_patch_flag
+				has_deposit = d_eco_city_park
+			}
+			waste = -75
+		}
+		upkeep = {
+			energy = 2
+			trigger = {
+				has_global_flag = ecology_pops_patch_flag
+				has_deposit = d_eco_city_park
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_global_flag = ecology_pops_patch_flag
+			has_deposit = d_eco_city_park
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_amenities_add = 500
+			planet_housing_add = -300
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_global_flag = ecology_pops_patch_flag
+			has_deposit = d_eco_city_park
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			planet_amenities_no_happiness_add = 500
+			planet_housing_add = -300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_civic_avian_construction = yes
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOR = { 
+					has_valid_civic = civic_agrarian_idyll
+					is_agrarian_empire = yes
+					is_bugged_agrarian_idyll = yes
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+}

@@ -1,0 +1,69 @@
+{
+  "district_arcology_housing": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/01_arcology_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/01_arcology_districts.txt"
+  ],
+  "district_arcology_leisure": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/01_arcology_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/01_arcology_districts.txt"
+  ],
+  "district_battle_thrall": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_city": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_crashed_slaver_ship": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_hive": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_nexus": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_pd_commercial_arcology_housing": [
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/pd_arcology_districts.txt",
+    "_My Patch/common/districts/district_pd_arcologies_housing.txt"
+  ],
+  "district_pd_fortress_arcology_housing": [
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/pd_arcology_districts.txt",
+    "_My Patch/common/districts/district_pd_arcologies_housing.txt"
+  ],
+  "district_pd_garden_arcology_housing": [
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/pd_arcology_districts.txt",
+    "_My Patch/common/districts/district_pd_arcologies_housing.txt"
+  ],
+  "district_prison": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_prison_industrial": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_resort": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ],
+  "district_slave": [
+    "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt",
+    "External Mods/BPVR - More Building Slots/common/districts/00_urban_districts_replace.txt",
+    "External Mods/Planetary Diversity - More Arcologies/common/districts/00_urban_districts.txt"
+  ]
+}

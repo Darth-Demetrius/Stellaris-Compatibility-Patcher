@@ -1,0 +1,116 @@
+# auto-generated
+# output: common/districts/pd_arcology_districts_replace_pd_arcologies.txt
+# supported_version: 
+# sort_key: [2, 1, "district_pd_garden_arcology_housing"]
+# sources: [{"ref": "External Mods/Planetary Diversity - More Arcologies/common/districts/pd_arcology_districts.txt", "supported_version": "4.3.*"}, {"ref": "_My Patch/common/districts/district_pd_arcologies_housing.txt", "supported_version": "4.*"}]
+
+#Garden Arcology
+district_pd_garden_arcology_housing = {
+	base_buildtime = 600
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_pd_garden_arc_01
+		slot_pd_garden_arc_02
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_wilderness_empire = no }
+		uses_district_set = city_world
+		is_pd_garden_arcology = yes
+	}
+
+	potential = {
+		uses_district_set = city_world
+		NAND = {
+			is_capital = yes
+			owner = {
+				has_menace_perk = menp_behemoth_mind_meld
+			}
+		}
+		is_pd_garden_arcology = yes
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_mindlink
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_pd_park_ranger_add = 100
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_pd_park_ranger_effect_desc
+	}
+}
