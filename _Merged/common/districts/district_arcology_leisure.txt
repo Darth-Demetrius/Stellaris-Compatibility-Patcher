@@ -1,0 +1,60 @@
+# auto-generated
+# output: common/districts/����_all_merged_common_items_replace.txt
+# supported_version: 
+# sort_key: [1, 12, "district_arcology_leisure"]
+# sources: [{"ref": "External Mods/BPVR - Compatibility Patch/common/districts/����_all_merged_common_items.txt", "supported_version": "4.*"}, {"ref": "External Mods/BPVR - More Building Slots/common/districts/01_arcology_districts_replace.txt", "supported_version": "4.*"}, {"ref": "External Mods/Planetary Diversity - More Arcologies/common/districts/01_arcology_districts.txt", "supported_version": "4.3.*"}]
+
+district_arcology_leisure = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_organic_housing
+		district_city
+		district_craglands
+		district_nexus
+		district_hive
+		district_arcology_housing
+        # AG Mod Integration
+		################################# New Contents #################################
+        district_ag_shell_world_housing
+        district_ag_ancient_city_housing
+        district_ag_ancient_city_wilderness
+        district_ag_hive
+        district_ag_ancient_hive_wilderness
+        district_ag_nexus
+		##############################################################################
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 5
+			exotic_gases = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+	}
+
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 600
+	}
+}

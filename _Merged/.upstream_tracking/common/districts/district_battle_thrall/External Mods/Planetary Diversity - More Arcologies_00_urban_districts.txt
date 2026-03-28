@@ -1,0 +1,69 @@
+# source_mod: pd_arcologies
+# supported_version: 4.3.*
+# position: 18
+
+district_battle_thrall = {
+	base_buildtime = 480
+
+	overlay_icon = GFX_district_fortress
+
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
+
+	prerequisites = {
+		tech_basic_industry
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		has_modifier = slave_colony
+	}
+
+	potential = {
+		always = no
+	}
+
+	allow = {
+		hidden_trigger = {
+			has_modifier = slave_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+	}
+
+	resources = {
+		category = planet_districts_industrial
+		cost = {
+			minerals = @city_cost
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_battle_thrall_add = @base_district_jobs
+		}
+	}
+}
